@@ -1,4 +1,8 @@
 package co.veradebv.catalogly
 
-class CataloglyApp {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class CataloglyApp: Application() {
 }
