@@ -1,4 +1,4 @@
 package co.veradebv.catalogly
 
-class CataloglyShop {
+class CataloglyApp {
 }
