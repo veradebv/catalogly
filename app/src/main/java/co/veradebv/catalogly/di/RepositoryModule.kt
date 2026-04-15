@@ -1,5 +1,6 @@
 package co.veradebv.catalogly.di
 
+import co.veradebv.catalogly.data.repository.ProductRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

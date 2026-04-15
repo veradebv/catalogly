@@ -2,6 +2,9 @@ package co.veradebv.catalogly.di
 
 import android.content.Context
 import androidx.room.Room
+import co.veradebv.catalogly.data.local.db.AppDatabase
+import co.veradebv.catalogly.data.local.db.CartDao
+import co.veradebv.catalogly.data.local.db.ProductDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

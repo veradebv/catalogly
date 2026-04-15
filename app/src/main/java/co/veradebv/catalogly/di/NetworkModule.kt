@@ -29,15 +29,16 @@ object NetworkModule {
         level = HttpLoggingInterceptor.Level.BODY
     }
 
-//    @Provides
-//    @Singleton
-//    fun provideOkHttpClient(
-//        loggingInterceptor: HttpLoggingInterceptor,
-//        sslPinningConfig: SslPinningConfig
-//    ): OkHttpClient = OkHttpClient.Builder()
-//        .addInterceptor { loggingInterceptor }
-//        .certificatePinner(sslPinningConfig.certificatePinner)
-//        .build()
+    @Provides
+    @Singleton
+    fun provideOkHttpClient(
+        loggingInterceptor: HttpLoggingInterceptor,
+        sslPinningConfig: SslPinningConfig
+    ): OkHttpClient = OkHttpClient.Builder()
+        .addInterceptor(authInterceptor)
+        .addInterceptor (loggingInterceptor)
+        .certificatePinner(sslPinningConfig.certificatePinner)
+        .build()
 
     @Provides
     @Singleton
